@@ -29,7 +29,7 @@ l1=add_layer(xs,1,10,activation_function=tf.nn.relu)
 #我们构建的是——输入层1个、隐藏层10个、输出层1个的神经网络
 prediction=add_layer(l1,10,1,activation_function=None)
 #计算预测值prediction和真实值的误差，对二者差的平方求和再取平均
-loss=tf.reduce_mean(tf.reduce_sum(tf.square(ys-prediction),reduction_indices=[1]))
+loss=tf.reduce_mean(tf.reduce_sum(tf.square(ys-prediction),eduction_indices=[1]))
 train_step=tf.train.GradientDescentOptimizer(0.1).minimize(loss)
 
 init=tf.global_variables_initializer()
